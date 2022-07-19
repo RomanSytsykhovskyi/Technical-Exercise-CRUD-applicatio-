@@ -3,12 +3,18 @@ import { UseFormHandleSubmit, UseFormRegister } from "react-hook-form";
 import { Post } from "../types";
 
 export interface PostCardProps {
-  post: Post
+  post: Post;
 }
 
 export interface FormProps {
-  children: ReactNode
-  register: UseFormRegister<Post>
-  handleSubmit: UseFormHandleSubmit<Post>
-  handleFormSubmit: (data: Post) => void
+  children: ReactNode;
+  register: UseFormRegister<Post>;
+  handleSubmit: UseFormHandleSubmit<Post>;
+  handleFormSubmit: (data: Post) => void;
+}
+
+export interface PaginationProps {
+  setPage: (num: number) => void;
+  postLength: number;
+  postQuantity: number;
 }
